@@ -1,0 +1,20 @@
+.extra h1 {
+    color: red;
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.extra p {
+    color: blue;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.extra button {
+    background-color: green;
+    border: 1px solid;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
