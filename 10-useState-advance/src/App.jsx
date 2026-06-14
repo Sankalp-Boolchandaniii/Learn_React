@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const App =() =>{
 
-  const [user, setUser] = useState({name: "sankalp", age: "25", role: "dev"});
+  const [user, setUser] = useState({name: "sankalp", age: 25, role: "dev"});
 
   const [arr, setarr] = useState([10, 20, 30]);
 
@@ -29,9 +29,16 @@ const App =() =>{
   }
 
   function changeRole() {
-    setUser(prevUser=>({
-      ...prevUser, role: "senior dev"
-    }))
+    let roleVal=user.role
+    if (roleVal==="dev"){
+      setUser(prevUser=>({
+        ...prevUser, role: "senior dev"
+      }))
+    } else if (roleVal==="senior dev"){
+      setUser(prevUser=>({
+        ...prevUser, role: "dev"
+      }))
+    }
   }
 
   // and below is to update arrays using spread operator
